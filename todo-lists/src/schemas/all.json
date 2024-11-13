@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "ITodoList": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "task": {
+          "type": "array",
+          "items": {
+            "$ref": "Task#"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "description",
+        "task"
+      ],
+      "additionalProperties": false
+    },
+    "Task": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "importance": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "description",
+        "importance"
+      ],
+      "additionalProperties": false
+    },
+    "IdInURL": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "IdInUrlTask": {
+      "type": "object",
+      "properties": {
+        "idList": {
+          "type": "number"
+        },
+        "idTask": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "idList",
+        "idTask"
+      ],
+      "additionalProperties": false
+    }
+  }
+}
