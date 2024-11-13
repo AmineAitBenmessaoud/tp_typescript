@@ -1,5 +1,6 @@
 FROM node:23.1
 
+<<<<<<< HEAD
 # Create app directory in container
 WORKDIR /app
 
@@ -23,3 +24,16 @@ EXPOSE 3000
 
 # Command to run the application
 CMD ["node", "dist/app.js"]
+=======
+WORKDIR /app
+
+COPY . .
+
+RUN npm install
+
+RUN npm run build:ts
+
+CMD ["node","dist/index.js"]
+
+EXPOSE 8080
+>>>>>>> origin/TP2_Gabriel
