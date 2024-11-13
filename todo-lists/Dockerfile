@@ -1,14 +1,14 @@
 FROM node:23.1
 # Create app directory in container
 WORKDIR /app
-COPY . .
+COPY package.json package-lock.json ./
+# Install app dependencies  
 
-RUN npm install -g fastify-cli
 
 RUN npm install
 
-RUN npm run build:ts
+COPY . .
 
-CMD ["node","dist/index.js"]
+CMD ["node", "index.js"]
 
 EXPOSE 3000

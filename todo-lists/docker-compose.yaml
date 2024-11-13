@@ -1,0 +1,9 @@
+services:
+  todo-list:
+    build: .
+    environment:
+      - PORT=3001             ## Change le port de fastify
+    ports:
+      - "5001:3001"           ## HOST:CONTAINER
+    volumes:
+      - ./todo-list:/code     ## SOURCE:TARGET

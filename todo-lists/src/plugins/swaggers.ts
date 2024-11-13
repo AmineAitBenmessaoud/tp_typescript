@@ -13,17 +13,15 @@ export default fp<FastifySwaggerOptions>(async (fastify) => {
       ],
     },
   });
+  // fastify.addSchema({
+  //   $id: 'ITodoList',
+  //   type: 'object',
+  //   properties: JsonSchemas.definitions.ITodoList
+  // })
+  // fastify.addSchema({
+  //   type: 'object',
+  //   properties: JsonSchemas.definitions.ITodoItem
+  // })
 });
 
-
-export default fp<FastifySwaggerOptions>(async (fastify) => {
- fastify.addSchema({
-    $id: 'ITodoList',
-    ...JsonSchemas.definitions.ITodoList
-  })
-  fastify.addSchema({
-    $id: 'ITodoItem',
-    ...JsonSchemas.definitions.ITodoItem
-  })
-...
 
