@@ -1,9 +1,15 @@
+version: '3'
 services:
-  todo-list:
+  app:
     build: .
-    environment:
-      - PORT=3001             ## Change le port de fastify
     ports:
-      - "5001:3001"           ## HOST:CONTAINER
+      - "3000:3000" # Mapping du port pour accéder à l'app
     volumes:
-      - ./todo-list:/code     ## SOURCE:TARGET
+      - .:/app # Synchronisation du code local pour le développement
+      - /app/node_modules
+    environment:
+      - NODE_ENV=production # Ou "development" selon le besoin
+    command: npm run start # Commande pour lancer le service
+
+volumes:
+  node_modules:
