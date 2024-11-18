@@ -1,12 +1,8 @@
 import fp from "fastify-plugin";
 import swagger, { FastifySwaggerOptions } from "@fastify/swagger";
-<<<<<<< HEAD
-import JsonSchemas from '../schemas/all.json'
-=======
 
 import JsonSchemas from "../schemas/all.json";
 
->>>>>>> origin/TP2_Gabriel
 export default fp<FastifySwaggerOptions>(async (fastify) => {
   fastify.addSchema({
     $id: "ITodoList",

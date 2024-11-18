@@ -4,11 +4,7 @@ const fs = require("fs")
 function generateSchema() {
     /** @type {import('ts-json-schema-generator/dist/src/Config').Config} */
     const config = {
-<<<<<<< HEAD
-        path: "src/interfaces/*.ts",
-=======
         path: "src/interfaces/index.ts",
->>>>>>> origin/TP2_Gabriel
         // tsconfig: "tsconfig.json",
         type: "*", // Or <type-name> if you want to generate schema for that one type only
     }
